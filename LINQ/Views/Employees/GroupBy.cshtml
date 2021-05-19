@@ -4,7 +4,7 @@
     ViewData["Title"] = "Group By";
 }
 
-<h4>All employees grouped by age with salary listed</h4>
+<h4>All employees grouped by age with name and salary listed</h4>
 
 <div class="row">
     @foreach (var agegroup in Model.GroupBy(e => e.Age))
