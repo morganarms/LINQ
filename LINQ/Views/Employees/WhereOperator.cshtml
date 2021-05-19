@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LINQ.Models.Employee>
+
+@{
+    ViewData["Title"] = "Where Operator";
+}
+
+<h4>Employees with salaries greater than 15,000 and aged under 30</h4>
+<h6>Employee count = @Model.Count()</h6>
+<table class="table table-success table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee First Name</th>
+            <th scope="col">Employee Last Name</th>
+            <th scope="col">Employee Salary</th>
+            <th scope="col">Employee Age</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.EmployeeId
+                </td>
+                <td>
+                    @item.FullName
+                </td>
+                <td>
+                    @item.FirstName
+                </td>
+                <td>
+                    @item.LastName
+                </td>
+                <td>
+                    @item.Salary
+                </td>
+                <td>
+                    @item.Age
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
